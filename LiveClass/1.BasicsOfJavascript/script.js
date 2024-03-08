@@ -34,30 +34,30 @@
 // console.log(str2)
 // console.log(str3)
 
-// -=------ data types ------------
+// // -=------ data types ------------
 
-// 1. numbers
-let grades = 9.5;
-let num =100 ;
-// 2. bigInt
+// // 1. numbers
+// let grades = 9.5;
+// let num =100 ;
+// // 2. bigInt
 
-var bigInt= 1325346344634;
+// var bigInt= 1325346344634;
 
-// 3. string
-var name = "vicky"; 
-var nm = 'vicky';
-var n= `name ${nm}`;
+// // 3. string
+// var name = "vicky"; 
+// var nm = 'vicky';
+// var n= `name ${nm}`;
 
-// NOTE: there is no character support in js , instead it's about strings 
+// // NOTE: there is no character support in js , instead it's about strings 
 
-// 4. boolean 
-const isSunHot=true;
+// // 4. boolean 
+// const isSunHot=true;
 
-// 4. Null 
+// // 4. Null 
 
-const isHeLying = null ;
+// const isHeLying = null ;
 
-console.log("isHeLying :", isHeLying);
+// console.log("isHeLying :", isHeLying);
 
 // 5. undefined 
 
@@ -68,26 +68,27 @@ console.log("isHeLying :", isHeLying);
 
 // 6. OBJECTS(Arrays, Objects, Functions ) :
 // ojects : stores key value pairs and it can also store objects inside it like this 
-const myVicky= {
-    name:"Vicky",
-    age:20,
-    rollNo:36,
-    address : {
-        pincode:700129,
-        street:"Vivekananda sarani ",
-        district: "north 24 parganas"
-    },
-    subjects :["maths", "physics", "english"]
-};
-// for the key address : --> there is a whole object as value 
-// a key can also take arrays where the key subjects ---> stores all the subjects in form of arrays 
 
-console.log(myVicky);
+// const myVicky= {
+//     name:"Vicky",
+//     age:20,
+//     rollNo:36,
+//     address : {
+//         pincode:700129,
+//         street:"Vivekananda sarani ",
+//         district: "north 24 parganas"
+//     },
+//     subjects :["maths", "physics", "english"]
+// };
+// // for the key address : --> there is a whole object as value 
+// // a key can also take arrays where the key subjects ---> stores all the subjects in form of arrays 
 
-const array = [1,2,3,4,5];// this is also a special type of object too 
-console.log(array);
-// and same goes for arrays too ----> it aalso store anything --> it can also store arrays and also objects 
-console.log(array[3]);
+// console.log(myVicky);
+
+// const array = [1,2,3,4,5];// this is also a special type of object too 
+// console.log(array);
+// // and same goes for arrays too ----> it aalso store anything --> it can also store arrays and also objects 
+// console.log(array[3]);
 //for accessing the elements in the array 
 
 // -----------------------------------------------------------------------------
@@ -148,4 +149,39 @@ console.log(array[3]);
 
 // ---------- Coercion (conversion )------------
 
+//--------------- Rule 1. in programming languages the + operator has two meaning -----------------------
+// 1.math addition
+// 2. String concatenation ( adding two strings )
 
+// with String -> + always mean concatenation 
+// NOTE: String + Anything is always a String 
+console.log("abc"+"de");//"abcde"
+console.log("1"+"hello");//"1hello"
+console.log(1+"1");//"11"
+console.log(""+[1,2,3,4,5]);//"1,2,3,4,5" --> special case 
+console.log(""+{})//"[object Object]" -->special case 
+console.log("abc"+true);//"abctrue"
+console.log("abc"+null);//"abcnull"
+console.log("abc"+undefined);//"abcundefined"
+
+// ------------------ Rule 2. String to integer-------------
+
+let str = "12";
+console.log(+str);//it should not be done but it will give output as integer using  + --> operator 
+//  but you should refrain from this syntax
+
+console.log(Number(str));// it should be done instead of + operator using Number() 
+console.log(parseInt(str));// you can use parseInt() too . We will be talking about redix in future
+str ="12as";
+console.log(Number(str));//NaN --> not a number --> it cannot be converted into a number 
+
+// -------------- Rule 3. String with (*, /, -, %) -------------------
+
+const mult= "3"*"3";
+const divide="6"/"3";
+const minus = "3"-"1";
+const modulus="103"%"50";
+console.log(mult,'mult');//9
+console.log(divide,'divide');//2
+console.log(minus,',minus');//2
+console.log(modulus,'modulus');//3
