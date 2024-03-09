@@ -185,3 +185,17 @@ console.log(mult,'mult');//9
 console.log(divide,'divide');//2
 console.log(minus,',minus');//2
 console.log(modulus,'modulus');//3
+
+// push, pop, shift, unshift
+const array=[12,43,65,87,9];
+array.push(5);
+console.log(array);
+array.pop();
+console.log(array);
+array.shift();
+console.log(array);
+const arrLen=array.unshift(1);
+console.log(arrLen);
+console.log(array);
+
+// ------------- Ojects 2:06
