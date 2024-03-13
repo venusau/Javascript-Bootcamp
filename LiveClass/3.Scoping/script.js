@@ -1,52 +1,222 @@
-// ----------------SCoping (scope)------------------
-// 1. the JS file is global itself 
-// WE have Gec for executing this 
-// For functions we create a new execution context FEC(functional execution context )
+// ------------------------- SCOPING (SCOPE) ------------------------
 
-// 2. Scope of var => global and Functional. (EC-> execution context)
-// example 1
-/*
-var a=12;
-console.log(a);//12
+// 1. the JS file is GLobal itself.
+// 2. SCOPE of Var => global and Fuctional. (EC -> execution context)
 
-if(true){
-    console.log(a,'inside if block ');//12
-}
-console.log(a);//12
-*/
-// example 2
+// EXAMPLE 1:
+
 /*
-var a=12;
-if (true){
-    var a=99;
-    console.log(a,'answer 1');//99
+var a = 12;
+console.log(a);
+
+if (true) {
+  console.log(a, "inside the if block");
 }
-console.log(a,'answer 2');//99
+
+console.log(a);
+
 */
 
-// example 3
+// EXAMPLE 2:
 
-// return keyword 
-// 1.return the value to the next EC
-// destroy the topmost EC
 /*
-var a =12;
-console.log(a,"answer 1");//12
-function abc(){
-    var a=99;
-    console.log(a,"answer 2");//99
-    return 100;
+var a = 12;
+
+if (true) {
+  var a = 99;
+  console.log(a, "answer 1");
 }
-console.log(abc(),"answer 3");//100
-console.log(a,"answer 4");//12 
+
+console.log(a, "answer 2");
+
 */
-// example 4
-// JS will add return by itself with value undefined 
-var a =12;
-console.log(a,"answer 1");//12
-function abc(){
-    var a=99;
-    console.log(a,"answer 2");//99
+
+// ------------- PARSING IN JS ----------
+
+// JS CODE cant be executed without an EC (Execution context) -> GEC (global )
+
+// when there is FUNCTIOn EXECUTION there is creation of new EC (Function execution context).
+
+// when a new box is created 2 phases (parsing and execution ) follows.
+// paring in js has 2 phase
+// 1. Pharsing phase
+// 2. execution phase.
+
+// Return keywod
+// 1. return the value to the BELOW BOX (BELOW EC)
+// 2. DESTORY THE top most BOX (EC).
+
+// EXAMPLE 3:
+
+/* 
+var a = 12;
+console.log(a, "asnwer 1");
+
+function abc() {
+  var a = 100;
+  console.log(a, "answer 2");
+
+  return 99;
 }
-console.log(abc(),"answer 3");//100
-console.log(a,"answer 4");//12 
+
+console.log(abc());
+
+console.log(a);
+
+// Answer : 12, 100, 99, 12.
+
+*/
+
+// EXAMPLE 4:
+
+/*
+var a = 12;
+console.log(a, "asnwer 1");
+
+function abc() {
+  var a = 100;
+  console.log(a, "answer 2");
+}
+
+const result = abc();
+console.log(result);
+
+console.log(a);
+
+// // Answer : 12, 100, undefined, 12.
+
+*/
+
+// EXAMPLE 5:
+
+/*
+var a = 99;
+
+var a = 0;
+
+console.log(a);
+
+// asnwer: 0
+
+*/
+
+//  EXAMPLE 6:
+
+/*
+var a = 12;
+console.log(a, "answer 1");
+
+if (true) {
+  var a = 99;
+  console.log(a, "answer 2");
+}
+
+for (let i = 0; i < 1; i++) {
+  var a = 100;
+  console.log(a, "asnwer 3");
+}
+
+console.log(a, "asnwer 4");
+
+// ANSWER : 12, 99, 100, 100
+
+*/
+
+// EXAMPLE 7:
+
+/*
+var obj = {
+  name: "utkarsh",
+};
+
+console.log(obj);
+
+function user() {
+  var obj = {
+    name: "amit",
+  };
+  console.log(obj);
+}
+
+user();
+
+console.log(obj);
+
+Answer: utkarsh, amit, utkarsh
+
+*/
+
+// EXAMPLE 8:
+
+/*
+var a = 12;
+console.log(a);
+
+function abc() {
+  console.log(a);
+  var a = 99;
+  console.log(a);
+}
+
+abc();
+
+console.log(a);
+
+// answer: 12 undefined 99 12
+
+*/
+
+// EXAMPLE 9:
+
+/*
+var a = 12;
+console.log(a);
+
+function abc() {
+  console.log(a);
+}
+
+abc();
+
+console.log(a);
+
+
+// Answer : 12 12 12
+
+*/
+
+//  CONCLUSION: var has a EXECUTION CONTEXT as scope
+
+// ---------------- LET & CONST -----------------------
+
+// let and const has a block scope/
+
+// EXAMPLE 1:
+
+let a = 99;
+console.log(a);
+
+if (true) {
+  let a = 12;
+  console.log(a);
+}
+
+console.log(a);
+
+// Answer: 99 12 99
+
+// EXAMPLE 2:
+/*
+function greet(name = "kk") {
+  console.log(`Hello, ${name}!`);
+}
+greet(undefined); // nathan 
+
+function greet(name = "Nathan") {
+  console.log(`Hello, ${name}!`);
+}
+greet(undefined); // nathan
+
+greet(null) // null
+
+*/
