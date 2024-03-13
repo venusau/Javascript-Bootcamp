@@ -16,9 +16,32 @@ console.log(newArray);
 console.log(arr==newArray);
 */
 // Way 3 
-const newArray=[...arr];//using the ... -> spread operator 
+const newArray=[...arr];//using the (...) -> spread operator 
 console.log(newArray);
 console.log(arr==newArray);
 
 
 // ---------- Deep copy and Shallow Copy ------------------
+const person={
+    name:"vicky",
+    class:"12",
+    address:
+    {
+        street:"road 44",
+        pincode:700129,
+        houseNumber:"P-47"
+    }
+};
+
+const copyPerson={
+    ...person
+};
+copyPerson.address.pincode=700130;
+console.log(person,"person");
+console.log(copyPerson,"copy Person");
+// this shallow copy 
+
+const copyPerson2=JSON.parse(JSON.stringify(person));
+copyPerson2.address.pincode=700129;
+console.log(copyPerson2,"copy Person 2");
+//deep copy 
