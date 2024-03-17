@@ -118,7 +118,7 @@ spaceship(humanLeft,humanRight,"destroy");
 *///HOF
 
 // ------------------------- call back functions ----------------------------
-// any function that you give to a 
+// any function that you pass to other function 
 //  humanRight, humanLeft -> call back functions 
 
 
