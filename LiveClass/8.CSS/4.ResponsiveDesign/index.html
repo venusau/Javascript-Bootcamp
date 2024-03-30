@@ -1,47 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Utkarsh Docs</title>
-
+  <head>
     <link rel="stylesheet" href="./styles.css" />
-
-</head>
-
-<body>
-
-    <h1>Responsive Design</h1>
-
-    <br />
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
     <!-- Navbar -->
-
-    <nav>
-        <!-- Item 1 -->
-        <h1>XYZ.com</h1>
-
-        <!-- item2 -->
-        <ul class="navItems">
-            <li>
-                contact
-            </li>
-            <li>
-                work
-            </li>
-            <li>
-                profile
-            </li>
-        </ul>
-    </nav>
-
-
-
-
-    <script src="./script.js"></script>
-
-</body>
-
+    <div class="content">
+      <nav class="Navbar">
+        <h1 class="xyz"><a href="#" class="">XYZ.com</a></h1>
+        <div class="right-elements">
+          <ul class="navitems">
+            <div id="dropdown" class="dropdown">
+              <li>work</li>
+              <div class="dropdown-content">
+                <a href="#" class="dropdown-contents">Delhi</a>
+                <a href="#" class="dropdown-contents">Kolkata</a>
+                <a href="#" class="dropdown-contents">Bengaluru</a>
+              </div>
+            </div>
+            <div id="dropdown" class="dropdown">
+              <li>contact</li>
+              <div class="dropdown-content">
+                <a href="#" class="dropdown-contents">Option 1</a>
+                <a href="#" class="dropdown-contents">Option 2</a>
+                <a href="#" class="dropdown-contents">Option 3</a>
+              </div>
+            </div>
+            <div id="dropdown" class="dropdown">
+              <li>profile</li>
+              <div class="dropdown-content"></div>
+            </div>
+          </ul>
+          <div class="Search">
+            <h4>Search bar</h4>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </body>
 </html>

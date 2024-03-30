@@ -136,3 +136,16 @@ Syntax
 */
 
 /* ******* -----------------PSEUDO ELEMENT Selectors  ******** --------------- * */
+
+/* ****-------------------------------------CSS Specificity -----------------------------******** */
+/* 
+1.Inline CSS
+2.CSS under the styles tag 
+3.CSS in the External css file 
+*/
+
+/* 
+1. ID is prefered over the Class in the css selectors 
+--ID is more specific over the Class, think of it as a Identity where it is more specific rather than class 
+--which may not be spcific 
+*/
