@@ -96,7 +96,7 @@ console.log("hello!!!!");
 
 let score = 320;
 
-var commentary = "Hey India score is ${score}"; // hindi
+var commentary = `Hey India score is ${score}`; // hindi
 let commentary2 = "Hey Wikcket down new score is 290"; // english
 
 // String template
@@ -434,21 +434,21 @@ var a = 100;
   Hoisting means to bring variable and function declaration to top.
 */
 
-/*
-const result = sum(1, 2);
-console.log(result);
 
-console.log(a);
+// const result = sum(1, 2);
+// console.log(result);
 
-function sum(a, b) {
-  return a + b;
-}
+// console.log(a);
 
-var a = 99;
+// function sum(a, b) {
+//   return a + b;
+// }
+
+// var a = 99;
 
 // Asnwer : 3, undefined.
 
-*/
+
 
 //  ----------------------------- BAsic Operations (Assignment, Operator)------------------------
 
