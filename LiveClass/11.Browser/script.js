@@ -8,7 +8,7 @@
 /*
   1. DOM: Document object model (responsible for the view / html)
   2. JS: responsible for logic (math and Functions).
-  3. BOM Browser Object models -> it is collection of functions provided by the browser 
+  3. BOM: Browser Object models -> it is collection of functions provided by the browser 
   like localStorage.
 
 */
