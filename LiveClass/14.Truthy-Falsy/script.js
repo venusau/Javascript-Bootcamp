@@ -98,3 +98,9 @@ if (val1) {
 }
 
 */
+
+const a=1;
+const b=2;
+const c=1;
+console.log(a===b && a);
+console.log(a===c && a);
