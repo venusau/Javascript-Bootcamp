@@ -418,3 +418,38 @@ console.log(sun.getYear);
 */
 
 // See Inheritance in Function Constructor ?
+
+
+// ----------------------INSTANCE vs STATIC Methods/Properties --------------------------
+/*
+class Circle{
+  radius;
+  constructor(radius){
+    this.radius=radius;
+  }
+
+  draw(){
+    console.log(`draw a circle of radius ${this.radius}`);
+  }
+
+  static parse(){
+    console.log("this is a static parse");
+  }
+}
+
+let c1= new Circle(10);
+
+console.log(c1);
+c1.draw();
+
+// draw, radius are instance properties of Circle class 
+// c1 is an Instance of a the class Circle 
+
+Circle.parse();
+// Circle.draw(); //this will not work 
+
+// ---------------------CHECK INSTANCE:-----------------------------
+console.log(c1 instanceof Circle);
+*/
+
+
